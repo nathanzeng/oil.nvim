@@ -1,9 +1,12 @@
 {
+  "$schema": "https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json",
   "runtime": {
-    "version": "LuaJIT",
-    "pathStrict": true
+    "version": "LuaJIT"
   },
-  "type": {
-    "checkTableShape": true
+  "workspace": {
+    "checkThirdParty": "Disable",
+    "library": [
+      "$VIMRUNTIME"
+    ]
   }
 }
