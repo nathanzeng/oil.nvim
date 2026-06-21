@@ -810,6 +810,9 @@ local function maybe_hijack_directory_buffer(bufnr)
   if bufname == "" then
     return false
   end
+  if vim.v.startreason == "restart" then
+    return false
+  end
   if util.parse_url(bufname) or vim.fn.isdirectory(bufname) == 0 then
     return false
   end
